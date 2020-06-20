@@ -4,6 +4,7 @@ const edit_item = require('./utils/edit_item')
 var bodyParser = require("body-parser")
 
 const app = express()
+const port = process.env.PORT || 3000
 const index_path = path.join(__dirname, '../public')
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'hbs')
@@ -27,6 +28,6 @@ app.post('/remove', (req, res) => {
 
     res.redirect('/')
 })
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('server listening at port 3000')
 })
