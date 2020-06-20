@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to-do App</title>
+</head>
+
+<body>
+    <form action="/additem" method="POST">
+        <input type="text" name="item" id="item">
+        <button id="add">add</button>
+        <ul class="people_list">
+    </form>
+    <form action="/remove" method="POST">
+        {{#each list}}
+
+        <input type="checkbox" name="item" id="item" value={{@index}} >
+        <label for="item" >{{this}}</label><br> {{/each}}
+        <button>remove</button>
+    </form>
+    </ul>
+
+
+
+
+    </form>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
